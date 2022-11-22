@@ -11,6 +11,6 @@ export function fetchLongitudeAndLatitude(query) {
     .then(json => 
       Array.isArray(json) && json.length > 0
         ? Promise.resolve({lon: Number(json[0].lon), lat: Number(json[0].lat)})
-        : Promise.reject(new Error("No results found.")))
+        : Promise.reject(new Error("No results found for query.")))
     .catch(err => console.log(err));
 }
