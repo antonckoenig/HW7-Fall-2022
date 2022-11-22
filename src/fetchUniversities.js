@@ -7,10 +7,11 @@ export function fetchUniversities(query) {
 
   // GET request
   return fetch(searchUrl.toString())
-    .then(res => res.json())
-    .then(json => 
+    .then((res) => res.json())
+    .then((json) =>
       Array.isArray(json)
-        ? Promise.resolve(json.map(obj => obj.name))
-        : Promise.reject(new Error("Bad json.")))
-    .catch(err => console.log(err));
+        ? Promise.resolve(json.map((obj) => obj.name))
+        : Promise.reject(new Error("Bad json."))
+    )
+    .catch((err) => console.log(err));
 }

@@ -10,10 +10,14 @@ export function fetchCurrentWeather(longitude, latitude) {
 
   // GET request
   return fetch(searchUrl.toString())
-    .then(res => res.json())
-    .then(json => 
-      typeof json === 'object'
-        ? Promise.resolve({time: json.hourly.time, temperature_2m: json.hourly.temperature_2m})
-        : Promise.reject(new Error("No results found.")))
-    .catch(err => console.log(err));
+    .then((res) => res.json())
+    .then((json) =>
+      typeof json === "object"
+        ? Promise.resolve({
+            time: json.hourly.time,
+            temperature_2m: json.hourly.temperature_2m,
+          })
+        : Promise.reject(new Error("No results found."))
+    )
+    .catch((err) => console.log(err));
 }
