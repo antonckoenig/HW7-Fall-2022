@@ -1,3 +1,5 @@
+// We coded this as a group
+
 import { readFile, writeFile } from "node:fs/promises";
 
 export function writeToJSONFile(path, data) {

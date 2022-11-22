@@ -1,3 +1,5 @@
+// Coded by Anton Koenig
+
 import fetch from "node-fetch";
 
 export function fetchUniversities(query) {

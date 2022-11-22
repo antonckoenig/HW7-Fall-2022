@@ -1,3 +1,5 @@
+// We coded this as a group
+
 import { fetchCurrentWeather } from "./fetchCurrentWeather.js";
 import { fetchLongitudeAndLatitude } from "./fetchLongitudeAndLatitude.js";
 import { fetchUniversities } from "./fetchUniversities.js";

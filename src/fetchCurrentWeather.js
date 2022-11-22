@@ -1,3 +1,5 @@
+// Coded by Michael Perreault
+
 import fetch from "node-fetch";
 
 export function fetchCurrentWeather(longitude, latitude) {
