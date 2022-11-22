@@ -5,6 +5,6 @@ export function writeToJSONFile(path, data) {
 }
 
 export function readFromJSONFile(path) {
-  const { encoding } = "UTF-8";
-  return readFile(path, { encoding }).then((text) => JSON.parse(text));
+  const options = { encoding: "utf8" };
+  return readFile(path, options).then((text) => JSON.parse(text));
 }
