@@ -18,9 +18,9 @@ export function fetchUniversityWeather(university) {
 }
 
 export function fetchUMassWeather() {
-  return fetchUniversityWeather("University of Massachusetts").then(weather => weather.totalAverage);
+  return fetchUniversityWeather("University of Massachusetts").then(weather => ({totalAverage: weather.totalAverage})).catch(err => console.log(err));
 }
 
 export function fetchUCalWeather() {
-  return fetchUniversityWeather("University of California").then(weather => weather.totalAverage);
+  return fetchUniversityWeather("University of California").then(weather => ({totalAverage: weather.totalAverage})).catch(err => console.log(err));
 }
