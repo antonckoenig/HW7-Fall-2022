@@ -35,18 +35,15 @@ export function fetchUniversityWeather(university) {
       arr[1].reduce((acc, e, i) => ({ ...acc, [e]: arr[0][i] }), {
         totalAverage: arr[2],
       })
-    )
-    .catch((err) => console.log(err));
+    );
 }
 
 export function fetchUMassWeather() {
   return fetchUniversityWeather("University of Massachusetts")
-    .then((weather) => ({ totalAverage: weather.totalAverage }))
-    .catch((err) => console.log(err));
+    .then((weather) => ({ totalAverage: weather.totalAverage }));
 }
 
 export function fetchUCalWeather() {
   return fetchUniversityWeather("University of California")
-    .then((weather) => ({ totalAverage: weather.totalAverage }))
-    .catch((err) => console.log(err));
+    .then((weather) => ({ totalAverage: weather.totalAverage }));
 }

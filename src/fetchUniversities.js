@@ -12,6 +12,5 @@ export function fetchUniversities(query) {
       Array.isArray(json)
         ? Promise.resolve(json.map((obj) => obj.name))
         : Promise.reject(new Error("Bad json."))
-    )
-    .catch((err) => console.log(err));
+    );
 }

@@ -18,6 +18,5 @@ export function fetchCurrentWeather(longitude, latitude) {
             temperature_2m: json.hourly.temperature_2m,
           })
         : Promise.reject(new Error("No results found."))
-    )
-    .catch((err) => console.log(err));
+    );
 }

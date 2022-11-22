@@ -15,6 +15,5 @@ export function fetchLongitudeAndLatitude(query) {
             lat: Number(json[0].lat),
           })
         : Promise.reject(new Error("No results found for query."))
-    )
-    .catch((err) => console.log(err));
+    );
 }
